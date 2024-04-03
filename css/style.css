@@ -1,0 +1,85 @@
+/* RESET*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+.img-container{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow:hidden ;
+}
+/* background app*/
+.app-background-line{
+    background-color: #009688;
+    height: 15vh;
+}
+.app-background{
+    background-color: #dadbd4;
+    height: 85vh;
+}
+
+.profile-section{
+    background-color: #eaeaea;
+}
+
+/* APP */
+.app-container{
+    height: calc(100vh - 100px);
+    width: calc(100vw - 200px);
+    margin: 0 auto;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* UTILITY */
+.d-flex{
+    display: flex;
+}
+.space-between{
+    justify-content: space-between;
+}
+.row{
+    width: 100%;
+    flex-wrap: wrap;
+}
+.col-small{
+    width: 35%;
+}
+.col-bigger{
+    width: 65%;
+    flex-shrink: 0;
+}
+.align-center{
+    align-items: center;
+    justify-content: center;
+}
+.g-1{
+    gap: 5px
+}
+.g-3{
+    gap: 15px
+}
+.p-1{
+    padding: 5px;
+}
+/* ICON UTILITY */
+.color-unactive{
+    color: #b1b1b1;
+}
+
+/*DEBUG */
+.debug-bg1{
+background-color: beige;
+}
+.debug-bg2{
+    background-color: green;
+    }
