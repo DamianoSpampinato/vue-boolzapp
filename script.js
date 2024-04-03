@@ -82,9 +82,11 @@ createApp({
                   }
                 ],
               },
+          
             ],
         };
     },
     methods: {
+      
     }
 }).mount('#app');

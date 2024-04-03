@@ -11,9 +11,14 @@ img{
 .img-container{
     height: 50px;
     width: 50px;
-    border-radius: 50%;
-    overflow:hidden ;
 }
+
+input{
+    border: none;
+    background-color: inherit;
+    border-left: 1px solid #f6f6f6;
+}
+
 /* background app*/
 .app-background-line{
     background-color: #009688;
@@ -28,6 +33,27 @@ img{
     background-color: #eaeaea;
 }
 
+/* NOTIFICATION-BANNER */
+.notification-banner{
+    background-color: #8edafc;
+ 
+}
+.icon-container{
+    background-color: #ffff;
+    height: 60px;
+    width: 60px;
+}
+.icon-container > i{
+    color: #8edafc;
+}
+.text-container{
+    align-self: center;
+}
+.text-container > small {
+    text-decoration: underline;
+    color: gray;
+}
+
 /* APP */
 .app-container{
     height: calc(100vh - 100px);
@@ -39,6 +65,27 @@ img{
     transform: translateX(-50%);
 }
 
+
+/* SEARCH CONTAINER */
+.search-container{
+    border: 1px solid #f6f6f6;
+    margin: 5px;
+}
+/* CONTACT SECTION */
+#contacts .img-container{
+    width: 65px;
+    height: 65px;
+
+}
+
+.card{
+    position: relative;
+}
+.last-message-time{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
 
 /* UTILITY */
 .d-flex{
@@ -53,6 +100,7 @@ img{
 }
 .col-small{
     width: 35%;
+    background-color: #fafafa;
 }
 .col-bigger{
     width: 65%;
@@ -71,9 +119,23 @@ img{
 .p-1{
     padding: 5px;
 }
+.p-3{
+    padding: 51px;
+}
+.rounded{
+    border-radius: 50%;
+    overflow:hidden ;
+}
+.grow{
+    flex-grow: 1;
+}
+
 /* ICON UTILITY */
 .color-unactive{
     color: #b1b1b1;
+}
+.column{
+    flex-direction: column;
 }
 
 /*DEBUG */

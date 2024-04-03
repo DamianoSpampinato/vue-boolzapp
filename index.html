@@ -17,11 +17,11 @@
         <div id="app">
             <div class="app-container d-flex">
                 <div class="row d-flex">
-                    <div class="col-small debug-bg2">
+                    <div class="col-small">
                         <!-- PROFILE SECTION -->
                         <div class="profile-section d-flex space-between p-1">
                             <div class="profile-container d-flex align-center g-1">
-                                <div class="img-container">
+                                <div class="img-container rounded">
                                     <img src="./img/avatar_io.jpg" alt="">
                                 </div>
                                 <span>Sofia</span>
@@ -33,6 +33,38 @@
                                 <i class="fa-solid fa-ellipsis-vertical color-unactive"></i>
                             </div>
                         </div>
+                        <!-- NOTIFICATION BANNER -->
+                        <div class="notification-banner d-flex p-1">
+                            <div class="icon-container rounded d-flex align-center">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <!-- TEXT NOTIFICATION BANNER -->
+                            <div class="text-container">
+                                <div>Ricevi notifiche di nuovi messaggi</div>
+                                <small>Attiva notifiche Desktop!</small>
+                            </div>
+                        </div>
+                        <!-- SEARCH CONTAINER -->
+                        <div class="search-container d-flex p-1 g-1">
+                            
+                            <span>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input class="grow" type="search" placeholder="Cerca o inizia una nuova chat" name="" id="">
+                        </div>
+                        <!-- contact section -->
+                        <section id="contacts">
+                            <div class="card d-flex p-1 g-3" v-for="contact, index in contacts">
+                                <div class="img-container rounded">
+                                    <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
+                                </div>
+                                <div>
+                                    <div>{{ contact.name }}</div>
+                                    <small>Ultimo messaggio inviato</small>
+                                </div>
+                                <small class="last-message-time">12:00</small>
+                            </div>
+                        </section>
                     </div>
                     <div class="col-bigger debug-bg1"></div>
                 </div>
@@ -40,6 +72,6 @@
     </div>
 </div>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
