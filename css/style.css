@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    flex-shrink: 0;
 }
 img{
     width: 100%;
@@ -100,6 +101,34 @@ input{
 .chat-session{
     height: calc(100% - 60px - 50px);
     background-image: url("../img/mine.jpg");
+    padding: 20px;
+}
+
+.message{
+    min-width: 40%;
+    max-width: 50%;
+    border-radius: 10px;
+    position: relative;
+    
+}
+.message-text{
+    min-width: 100%;
+    max-width: 100%;
+}
+.message-time{
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+    font-size: 12px;
+
+}
+.sent{
+background-color: #d5f9ba;
+
+}
+
+.received{
+    background-color: #fff;
 }
 /* CHAT INPUT */
 .chat-input-container{
@@ -150,7 +179,7 @@ input{
     padding: 5px;
 }
 .p-3{
-    padding: 51px;
+    padding: 15px;
 }
 .rounded{
     border-radius: 50%;
@@ -159,8 +188,12 @@ input{
 .grow{
     flex-grow: 1;
 }
-
-
+.justify-end{
+    justify-content: end;
+}
+.wrap{
+    flex-wrap: wrap;
+}
 /* ICON UTILITY */
 .color-unactive{
     color: #b1b1b1;
