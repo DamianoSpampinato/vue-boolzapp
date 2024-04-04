@@ -1,15 +1,15 @@
 const { createApp } = Vue;
-
 createApp({
-    data() {
-        return {
-            contacts: [{
-                name: 'Michele',
-                avatar: '_1',
-                visible: true,
-                messages: [{
-                    date: '10/01/2020 15:30:55',
-                    message: 'Hai portato a spasso il cane?',
+  data() {
+    return {
+      activeItem: 0 ,  
+      contacts: [{
+        name: 'Michele',
+        avatar: '_1',
+        visible: true,
+        messages: [{
+          date: '10/01/2020 15:30:55',
+          message: 'Hai portato a spasso il cane?',
                     status: 'sent'
                   },
                   {
@@ -87,6 +87,10 @@ createApp({
         };
     },
     methods: {
+      activeContact(index){
+      this.activeItem = index
       
+      }
+    
     }
 }).mount('#app');

@@ -54,7 +54,12 @@
                         </div>
                         <!-- contact section -->
                         <div id="contacts">
-                            <div class="card d-flex p-1 g-3" v-for="contact, index in contacts" v-show="contact.visible = true">
+                            <div class="card d-flex p-1 g-3" 
+                            v-for="contact, index in contacts" 
+                            v-show="contact.visible = true"
+                            @click="activeContact(index)"
+                            :class="{'active-contact' : index === activeItem}"
+                            >
                                 <div class="img-container rounded">
                                     <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
@@ -71,7 +76,7 @@
                         <div class="profile-section d-flex space-between p-1">
                             <div class="profile-container d-flex align-center g-1">
                                 <div class="img-container rounded">
-                                    IMG UTENTE
+                                    <img :src="'./img/avatar' + contacts[activeItem].avatar + '.jpg'" alt="">
                                 </div>
                                 <span>UTENTE ATTIVO</span>
                             </div>
@@ -84,19 +89,28 @@
                         <!-- CHAT SESSION -->
                         <div class="chat-session ">
                             <!-- TEMPLATE SENT -->
-                            <div class="row d-flex justify-end">
-                                <div class="message d-flex p-3 sent">
-                                    <div class="message-text">Ciao sono un messaggio</div>
-                                    <div class="message-time">12:00</div>
-                                </div>
-                            </div>
-                            <!-- TEMPLATE RECEIVED -->
-                            <div class="row d-flex">
-                                <div class="message d-flex p-3 received wrap">
-                                    <div class="message-text">Ciao sono un messaggio RICEVUTO
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate officiis voluptate tempore alias, explicabo id esse similique qui sint, eligendi cumque repellendus, labore tempora numquam nulla ea iusto dolorem?
+                            <div class="cycle"
+                            v-for="(message, index) in contacts[activeItem].messages"
+                            
+                            >
+                                <div class="row d-flex justify-end" 
+                                >
+                                    <div class="message d-flex p-3 sent" 
+                                    v-if="message.status === 'sent'"
+                                    
+                                    >
+                                        <div class="message-text">{{ message.message }}
+                                            <div class="message-time">{{ message.date }}</div>
+                                        </div>
                                     </div>
-                                    <div class="message-time">12:00</div>
+                                    <div class="row d-flex" v-else="message.status === 'received'">
+                                        <div class="message d-flex p-3 received wrap">
+                                            <div class="message-text">{{message.message}}
+                                            </div>
+                                            <div class="message-time">{{ message.date }}</div>
+                                        </div>
+                                </div>
+                                <!-- TEMPLATE RECEIVED -->
                                 </div>
                             </div>
                         </div>

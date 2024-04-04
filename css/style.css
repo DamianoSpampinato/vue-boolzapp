@@ -201,6 +201,9 @@ background-color: #d5f9ba;
 .column{
     flex-direction: column;
 }
+.active-contact{
+    background-color: #b1b1b1;
+}
 
 /*DEBUG */
 .debug-bg1{
