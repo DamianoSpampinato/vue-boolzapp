@@ -2,6 +2,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      userText: '',
       activeItem: 0 ,  
       contacts: [{
         name: 'Michele',
@@ -89,7 +90,24 @@ createApp({
     methods: {
       activeContact(index){
       this.activeItem = index
-      
+      },
+      sendMessage() {
+        const newMessage ={
+            date: '25/10/1999',
+            message: this.userText,
+            status: 'sent'
+          }
+          this.contacts[this.activeItem].messages.push(newMessage);
+          this.userText = ''
+          setTimeout(this.answerMessage, 1000)
+        },
+      answerMessage(){
+        const answer ={
+          date: '25/10/1999',
+          message: 'ok',
+          status: 'recieved'
+        }
+        this.contacts[this.activeItem].messages.push(answer);
       }
     
     }

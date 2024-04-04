@@ -122,6 +122,9 @@ input{
     font-size: 12px;
 
 }
+.chat-session .row{
+    margin-top: 10px;
+}
 .sent{
 background-color: #d5f9ba;
 
