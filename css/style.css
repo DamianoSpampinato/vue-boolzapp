@@ -58,7 +58,7 @@ input{
 /* APP */
 .app-container{
     height: calc(100vh - 100px);
-    min-width: calc(100% - 200px);
+    min-width: calc(1400px - 200px);
     margin: 0 auto;
     position: absolute;
     top: 50px;
@@ -96,6 +96,27 @@ input{
     right: 15px;
 }
 
+/* CHAT SESSION */
+.chat-session{
+    height: calc(100% - 60px - 50px);
+    background-image: url("../img/mine.jpg");
+}
+/* CHAT INPUT */
+.chat-input-container{
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    background-color: #f3eeea;
+}
+.chat-input-container input{
+    width: 80%;
+    padding: 10px;
+    background-color: #ffff;
+}
+.icon-input-container{
+    width: 10%;
+}
+
 /* UTILITY */
 .d-flex{
     display: flex;
@@ -105,7 +126,7 @@ input{
 }
 .row{
     width: 100%;
- 
+
 }
 .col-small{
     width: 35%;
