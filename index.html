@@ -53,7 +53,7 @@
                             <input class="grow" type="search" placeholder="Cerca o inizia una nuova chat" name="" id="">
                         </div>
                         <!-- contact section -->
-                        <section id="contacts">
+                        <div id="contacts">
                             <div class="card d-flex p-1 g-3" v-for="contact, index in contacts">
                                 <div class="img-container rounded">
                                     <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
@@ -64,9 +64,20 @@
                                 </div>
                                 <small class="last-message-time">12:00</small>
                             </div>
-                        </section>
+                        </div>
                     </div>
-                    <div class="col-bigger debug-bg1"></div>
+                    <div class="col-bigger debug-bg1">
+                        <!-- contact chat -->
+                        <div class="profile-section d-flex space-between p-1">
+                            <div class="profile-container d-flex align-center g-1">
+                                <div class="img-container rounded">
+                                    IMG UTENTE
+                                </div>
+                                <span>UTENTE ATTIVO</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
         </div>
     </div>

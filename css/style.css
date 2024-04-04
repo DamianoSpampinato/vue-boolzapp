@@ -31,12 +31,13 @@ input{
 
 .profile-section{
     background-color: #eaeaea;
+    height: 60px;
 }
 
 /* NOTIFICATION-BANNER */
 .notification-banner{
     background-color: #8edafc;
- 
+    height: 75px;
 }
 .icon-container{
     background-color: #ffff;
@@ -57,12 +58,13 @@ input{
 /* APP */
 .app-container{
     height: calc(100vh - 100px);
-    width: calc(100vw - 200px);
+    min-width: calc(100% - 200px);
     margin: 0 auto;
     position: absolute;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
+    
 }
 
 
@@ -70,8 +72,14 @@ input{
 .search-container{
     border: 1px solid #f6f6f6;
     margin: 5px;
+    height: 30px;
 }
 /* CONTACT SECTION */
+#contacts{
+    
+    height: calc(100% - 30px - 75px - 60px - 10px);
+    overflow-y: auto;
+}
 #contacts .img-container{
     width: 65px;
     height: 65px;
@@ -80,6 +88,7 @@ input{
 
 .card{
     position: relative;
+    border-bottom: 1px solid #f6f6f6 ;
 }
 .last-message-time{
     position: absolute;
@@ -96,7 +105,7 @@ input{
 }
 .row{
     width: 100%;
-    flex-wrap: wrap;
+ 
 }
 .col-small{
     width: 35%;
@@ -129,6 +138,7 @@ input{
 .grow{
     flex-grow: 1;
 }
+
 
 /* ICON UTILITY */
 .color-unactive{
