@@ -50,13 +50,16 @@
                             <span>
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
-                            <input class="grow" type="search" placeholder="Cerca o inizia una nuova chat" name="" id="">
+                            <input
+                            @keyup="searchContact"
+                            v-model="contactSearch" class="grow" type="search" placeholder="Cerca o inizia una nuova chat" name="" id="">
                         </div>
                         <!-- contact section -->
                         <div id="contacts">
                             <div class="card d-flex p-1 g-3" 
                             v-for="contact, index in contacts" 
-                            v-show="contact.visible = true"
+                            
+                            v-show="contact.visible === true"
                             @click="activeContact(index)"
                             :class="{'active-contact' : index === activeItem}"
                             >
