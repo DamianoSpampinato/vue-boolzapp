@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
       dt : DateTime.now(),
-     
+    
       contactSearch: '',
       userText: '',
       activeItem: 0 ,  
@@ -97,7 +97,7 @@ createApp({
       },
       sendMessage() {
         const newMessage ={
-            date: this.dt.toLocaleString(),
+            date: `${this.dt.hour} : ${this.dt.minute}`,
             message: this.userText,
             status: 'sent'
           }
@@ -107,7 +107,7 @@ createApp({
         },
       answerMessage(){
         const answer ={
-          date: this.dt.toLocaleString(),
+          date: `${this.dt.hour} : ${this.dt.minute}`,
           message: 'ok',
           status: 'recieved'
         }
