@@ -68,7 +68,7 @@
                                 </div>
                                 <div>
                                     <div>{{ contact.name }}</div>
-                                    <small>Ultimo messaggio inviato</small>
+                                    <small>{{ contact.messages[contact.messages.length - 1 ].message }}</small>
                                 </div>
                                 <small class="last-message-time">12:00</small>
                             </div>

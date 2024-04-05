@@ -2,6 +2,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      LastMessage: '',
       contactSearch: '',
       userText: '',
       activeItem: 0 ,  
@@ -84,12 +85,12 @@ createApp({
                   }
                 ],
               },
-          
+              
             ],
-        };
-    },
-    methods: {
-      activeContact(index){
+          };
+        },
+        methods: {
+          activeContact(index){
       this.activeItem = index
       },
       sendMessage() {
@@ -120,6 +121,9 @@ createApp({
             contact.visible = true
           }
         })
+      },
+      getLastMessage(){
+        return this.messages[this.messages.length - 1 ].message
       }
-    },
-}).mount('#app');
+      }
+    }).mount('#app');
