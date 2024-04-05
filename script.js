@@ -1,8 +1,10 @@
 const { createApp } = Vue;
+let DateTime = luxon.DateTime;
 createApp({
   data() {
     return {
-      LastMessage: '',
+      dt : DateTime.now(),
+     
       contactSearch: '',
       userText: '',
       activeItem: 0 ,  
@@ -95,7 +97,7 @@ createApp({
       },
       sendMessage() {
         const newMessage ={
-            date: '25/10/1999',
+            date: this.dt.toLocaleString(),
             message: this.userText,
             status: 'sent'
           }
@@ -105,7 +107,7 @@ createApp({
         },
       answerMessage(){
         const answer ={
-          date: '25/10/1999',
+          date: this.dt.toLocaleString(),
           message: 'ok',
           status: 'recieved'
         }
@@ -121,9 +123,6 @@ createApp({
             contact.visible = true
           }
         })
-      },
-      getLastMessage(){
-        return this.messages[this.messages.length - 1 ].message
       }
       }
     }).mount('#app');
