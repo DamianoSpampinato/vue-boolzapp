@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       dt : DateTime.now(),
+      randomMessage :['daje', 'figo', 'ciao mamma'],
     
       contactSearch: '',
       userText: '',
@@ -106,9 +107,10 @@ createApp({
           setTimeout(this.answerMessage, 1000)
         },
       answerMessage(){
+        let randomNumber = Math.floor(Math.random() * this.randomMessage.length);
         const answer ={
           date: `${this.dt.hour} : ${this.dt.minute}`,
-          message: 'ok',
+          message: `${this.randomMessage[randomNumber]}`,
           status: 'recieved'
         }
         this.contacts[this.activeItem].messages.push(answer);
